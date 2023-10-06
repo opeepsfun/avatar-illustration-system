@@ -2,3 +2,4 @@ lib/
 dev/
 tsconfig.json
 pnpm-lock.yaml
+example.png

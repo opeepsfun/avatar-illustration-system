@@ -3,6 +3,8 @@
 ![npm](https://img.shields.io/npm/v/@opeepsfun/avatar-illustration-system)
 ![license](https://img.shields.io/npm/l/@opeepsfun/avatar-illustration-system)
 
+<p align="center"><img src="./example.png" alt="Example image" width="200"/></p>
+
 ## Description
 
 Introducing the `@opeepsfun/avatar-illustration-system`, a pure JavaScript npm package that powers the avatar illustration system. This package provides an API to create unique, hand-drawn avatar illustrations which can be used in a myriad of applications such as user profiles, product illustrations, or any creative project you envision. No external libraries are required, making it a seamless addition to any project, irrespective of the tech stack.
@@ -12,6 +14,8 @@ The illustrations are designed by [Micah Lanier](https://www.figma.com/@micah). 
 ## Try It Out
 
 You can delve into the creative world of avatars by heading to the [official builder](https://beta.opeeps.fun/collections/avatar-illustration-system). Explore and interact with various options to create personalized avatars, get a hands-on experience, and see all the features in action.
+
+For a live React example, check out this [CodeSandbox demo](https://codesandbox.io/s/avatar-illustration-system-zpdjjd?file=/src/App.tsx).
 
 ## Installation
 
@@ -103,5 +107,5 @@ MIT
 
 ## Author
 
-- Emre Çakır
-- [Homepage](https://opeeps.fun)
+-   Emre Çakır
+-   [Homepage](https://opeeps.fun)

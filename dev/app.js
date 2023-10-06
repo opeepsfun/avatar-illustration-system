@@ -1,4 +1,4 @@
-import Avatar from "../build/avatar.js";
+import { Avatar } from "../build/index.js";
 
 const avatar = Avatar({ circle: { backgroundColor: "brown" }, size: 600, glasses: "Square", ear: "Attached", eye: "Round", shirt: "Crew" });
 

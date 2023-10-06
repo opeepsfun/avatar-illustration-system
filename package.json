@@ -1,6 +1,6 @@
 {
     "name": "@opeepsfun/avatar-illustration-system",
-    "version": "1.0.0",
+    "version": "1.0.1",
     "description": "npm package of avatar illustration system",
     "main": "./build/index.js",
     "types": "./build/types/index.d.ts",

@@ -1,4 +1,4 @@
-const RoundNose = {
+const Round = {
     name: "Round",
     props: {},
     width: 32,
@@ -10,4 +10,4 @@ const RoundNose = {
     }
 };
 
-export default RoundNose;
+export default Round;
