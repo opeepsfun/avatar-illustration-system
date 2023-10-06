@@ -30,7 +30,7 @@ npm install @opeepsfun/avatar-illustration-system
 Here's a simplistic example to kickstart your creativity:
 
 ```javascript
-import Avatar from "@opeepsfun/avatar-illustration-system";
+import { Avatar } from "@opeepsfun/avatar-illustration-system";
 
 const avatar = Avatar({
     circle: { backgroundColor: "brown" },
