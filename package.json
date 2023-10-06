@@ -1,0 +1,40 @@
+{
+    "name": "@opeepsfun/avatar-illustration-system",
+    "version": "1.0.0",
+    "description": "npm package of avatar illustration system",
+    "main": "./build/index.js",
+    "types": "./build/types/index.d.ts",
+    "author": "Emre Çakır",
+    "homepage": "https://opeeps.fun",
+    "scripts": {
+        "prebuild": "rimraf build",
+        "dev": "tsc -w",
+        "build": "tsc -d",
+        "publish": "npm publish --access public"
+    },
+    "keywords": [
+        "opeepsfun",
+        "avatar-illustration-system",
+        "illustrations",
+        "hand-drawn",
+        "art",
+        "design",
+        "components",
+        "UI",
+        "graphics",
+        "vector",
+        "svg",
+        "creative",
+        "personal-use",
+        "commercial-use",
+        "characters",
+        "avatars"
+    ],
+    "license": "MIT",
+    "dependencies": {},
+    "devDependencies": {
+        "@types/node": "^20.6.3",
+        "rimraf": "^5.0.1",
+        "typescript": "^5.2.2"
+    }
+}

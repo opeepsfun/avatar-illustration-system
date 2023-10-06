@@ -1,0 +1,18 @@
+{
+    "compilerOptions": {
+        "target": "es5",
+        "module": "ESNext",
+        "moduleResolution": "Node",
+        "declaration": true,
+        "sourceMap": false,
+        "declarationDir": "./build/types",
+        "outDir": "./build",
+        "rootDir": "./lib",
+        "removeComments": true,
+        "noEmitOnError": true,
+        "strict": true,
+        "esModuleInterop": true,
+        "forceConsistentCasingInFileNames": true
+    },
+    "exclude": ["node_modules", "build", "tests", "examples", "README.md"]
+}
