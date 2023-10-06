@@ -1,9 +1,9 @@
 # @opeepsfun/avatar-illustration-system
 
+<p align="center"><img src="https://assets.opeeps.fun/avatar-illustration-system-example.png" alt="Example image" width="200"/></p>
+
 ![npm](https://img.shields.io/npm/v/@opeepsfun/avatar-illustration-system)
 ![license](https://img.shields.io/npm/l/@opeepsfun/avatar-illustration-system)
-
-<p align="center"><img src="https://assets.opeeps.fun/avatar-illustration-system-example.png" alt="Example image" width="200"/></p>
 
 ## Description
 
