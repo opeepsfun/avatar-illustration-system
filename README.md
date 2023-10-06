@@ -5,7 +5,7 @@
 
 ## Description
 
-Introducing the `@opeepsfun/avatar-illustration-system`, a pure JavaScript npm package that powers an avatar illustration system. This package provides an API to create unique, hand-drawn avatar illustrations which can be used in a myriad of applications such as user profiles, product illustrations, or any creative project you envision. No external libraries are required, making it a seamless addition to any project, irrespective of the tech stack.
+Introducing the `@opeepsfun/avatar-illustration-system`, a pure JavaScript npm package that powers the avatar illustration system. This package provides an API to create unique, hand-drawn avatar illustrations which can be used in a myriad of applications such as user profiles, product illustrations, or any creative project you envision. No external libraries are required, making it a seamless addition to any project, irrespective of the tech stack.
 
 The illustrations are designed by [Micah Lanier](https://www.figma.com/@micah). Explore the beautiful artwork and get inspired!
 
