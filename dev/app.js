@@ -4,9 +4,10 @@ const avatar = Avatar({
     circle: { backgroundColor: "black" },
     size: 600,
     glasses: "Square",
-    ear: "Attached",
+    ear: "Detached",
     eye: "Round",
     top: "MisterT",
+    mouth: "Surprised",
     shirt: "Crew",
     color: {
         topColor: "yellow",

@@ -98,11 +98,11 @@ const drawEar = (option: keyof typeof ears, color?: ColorProps) => {
 
     if (option === "Attached") {
         return `<g transform="translate(1 0)">
-            ${svg.draw(color?.skinColor)}
+            ${svg.draw(color?.skinColor, color?.outlineColor)}
         </g>`;
     }
 
-    return svg.draw(color?.skinColor);
+    return svg.draw(color?.skinColor, color?.outlineColor);
 };
 
 const drawGlasses = (option: keyof typeof eyeglasses | undefined, color?: ColorProps) => {
