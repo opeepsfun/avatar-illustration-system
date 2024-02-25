@@ -12,10 +12,28 @@ const ears = { Attached, Detached };
 const shirts = { Collared, Crew, Tee };
 const tops = { MisterT, Fonze, Full, Bald, Doug, Phantom, Turban, Pixie };
 const noses = { Round: RoundNose, Pointed, Curved };
-const mouths = { Laughing, Frown, Nervous, Pucker, Sad, Smile, Smirk, Surprised };
+const mouths = {
+    Laughing,
+    Frown,
+    Nervous,
+    Pucker,
+    Sad,
+    Smile,
+    Smirk,
+    Surprised
+};
 const eyeglasses = { Round: RoundGlasses, Square: SquareGlasses };
 const eyebrows = { Up, Down, EyelashesDown, EyelashesUp };
 const eyes = { Smiling, Ellipse, EllipseShadow, Round: RoundEye };
+
+type ColorProps = {
+    outlineColor?: string;
+    skinColor?: string;
+    topColor?: string;
+    shirtColor?: string;
+    collarColor?: string;
+    glassFrameColor?: string;
+};
 
 type AvatarProps = {
     size: number;
@@ -30,36 +48,37 @@ type AvatarProps = {
     top?: keyof typeof tops;
     shirt?: keyof typeof shirts;
     eye?: keyof typeof eyes;
+    color?: ColorProps;
 };
 
-const drawTop = (option: keyof typeof tops) => {
+const drawTop = (option: keyof typeof tops, color?: ColorProps) => {
     const svg = tops[option];
 
     if (option === "Turban") {
         return `<g transform="translate(3.5 0)">
-            ${svg.draw()}
+            ${svg.draw(color?.topColor, color?.outlineColor)}
         </g>`;
     }
 
     if (option === "Full") {
         return `<g transform="translate(-26 2)">
-            ${svg.draw()}
+            ${svg.draw(color?.topColor, color?.outlineColor)}
         </g>`;
     }
 
     if (option === "MisterT") {
         return `<g transform="scale(1.02)">
-            ${svg.draw()}
+            ${svg.draw(color?.topColor, color?.outlineColor)}
         </g>`;
     }
 
     if (option === "Pixie") {
         return `<g transform="translate(-16 0)">
-            ${svg.draw()}
+            ${svg.draw(color?.topColor, color?.outlineColor)}
         </g>`;
     }
 
-    return svg.draw();
+    return svg.draw(color?.topColor, color?.outlineColor);
 };
 
 const drawMouth = (option: keyof typeof mouths) => {
@@ -74,31 +93,31 @@ const drawMouth = (option: keyof typeof mouths) => {
     return svg.draw();
 };
 
-const drawEar = (option: keyof typeof ears) => {
+const drawEar = (option: keyof typeof ears, color?: ColorProps) => {
     const svg = ears[option];
 
     if (option === "Attached") {
         return `<g transform="translate(1 0)">
-            ${svg.draw()}
+            ${svg.draw(color?.skinColor, color?.outlineColor)}
         </g>`;
     }
 
-    return svg.draw();
+    return svg.draw(color?.skinColor, color?.outlineColor);
 };
 
-const drawGlasses = (option: keyof typeof eyeglasses | undefined) => {
+const drawGlasses = (option: keyof typeof eyeglasses | undefined, color?: ColorProps) => {
     if (!option) return "";
 
     const svg = eyeglasses[option];
 
-    return svg.draw();
+    return svg.draw(color?.glassFrameColor);
 };
 
-const Avatar = ({ circle, ear = "Detached", mouth = "Laughing", nose = "Round", glasses, eyebrow = "Up", eye = "Smiling", shirt = "Collared", top = "Fonze", size }: AvatarProps) => {
-    const earSvg = drawEar(ear);
+const Avatar = ({ circle, ear = "Detached", mouth = "Laughing", nose = "Round", glasses, eyebrow = "Up", eye = "Smiling", shirt = "Collared", top = "Fonze", size, color = { outlineColor: "#171921", skinColor: "#AC6651" } }: AvatarProps) => {
+    const earSvg = drawEar(ear, color);
     const mouthSvg = drawMouth(mouth);
-    const topSvg = drawTop(top);
-    const selectedGlasses = drawGlasses(glasses);
+    const topSvg = drawTop(top, color);
+    const selectedGlasses = drawGlasses(glasses, color);
     const selectedNose = noses[nose];
     const selectedEyebrow = eyebrows[eyebrow];
     const selectedShirt = shirts[shirt];
@@ -107,7 +126,7 @@ const Avatar = ({ circle, ear = "Detached", mouth = "Laughing", nose = "Round", 
     const baseAvatar = `
         <g id="avatar">
             <g id="base" transform="translate(90 43)">
-                ${Base.draw()}
+                ${Base.draw(color.outlineColor, color.skinColor)}
             </g>
             <g id="mouth" transform="translate(180 203)">
                 ${mouthSvg}
@@ -136,7 +155,7 @@ const Avatar = ({ circle, ear = "Detached", mouth = "Laughing", nose = "Round", 
                 ${earSvg}
             </g>
             <g id="shirt" transform="translate(48 292)">
-                ${selectedShirt.draw()}
+                ${selectedShirt.draw(color.shirtColor, color.outlineColor, color.collarColor)}
             </g>
         </g>   
     `;
