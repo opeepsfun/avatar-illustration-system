@@ -3,7 +3,7 @@ const EyelashesDown = {
     props: {},
     width: 149,
     height: 51,
-    draw: (outlineColor = "#171921", skinColor = "#AC6651") => {
+    draw: () => {
         return `
         <path d='M27 29.5C33.1667 32 48.1 32.5 58.5 14.5' stroke='black' stroke-width='4' stroke-linecap='round' />
         <path d='M94 7C99.1667 12.3333 112.1 19.8 122.5 7' stroke='black' stroke-width='4' stroke-linecap='round' />

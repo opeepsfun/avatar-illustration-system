@@ -1,12 +1,12 @@
 const Base = {
-  name: "Base",
-  props: {},
-  width: 200,
-  height: 320,
-  draw: (outlineColor = "#171921", skinColor = "#AC6651") => {
-    return `
+    name: "Base",
+    props: {},
+    width: 200,
+    height: 320,
+    draw: (outlineColor = "#171921", skinColor = "#AC6651") => {
+        return `
             <g clip-path='url(#clip0_53_114)'>
-            <path d='M154 319.5C139.6 299.5 128.333 260.834 127 241.5L58.5 212L30 319.5H154Z' fill='${skinColor}' stroke='black' stroke-width='4' />
+            <path d='M154 319.5C139.6 299.5 128.333 260.834 127 241.5L58.5 212L30 319.5H154Z' fill='${skinColor}' stroke='${outlineColor}' stroke-width='4' />
             <mask id='mask0_53_114' style='mask-type:alpha' maskUnits='userSpaceOnUse' x='30' y='212' width='124' height='118'>
                 <path d='M154 329.5C139.6 309.5 128.333 260.834 127 241.5L58.5 212L30 329.5H154Z' fill='${skinColor}' />
             </mask>
@@ -40,7 +40,7 @@ const Base = {
                 </clipPath>
             </defs>
         `;
-  },
+    }
 };
 
 export default Base;

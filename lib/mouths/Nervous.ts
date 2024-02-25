@@ -3,7 +3,7 @@ const Nervous = {
     props: {},
     width: 80,
     height: 64,
-    draw: (outlineColor = "#171921", skinColor = "#AC6651") => {
+    draw: () => {
         return `
         <rect x='4.24805' y='17.4707' width='70' height='24' rx='4' transform='rotate(-4 4.24805 17.4707)' fill='black' />
         <path
