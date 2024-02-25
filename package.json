@@ -10,7 +10,7 @@
         "prebuild": "rimraf build",
         "dev": "tsc -w",
         "build": "tsc -d",
-        "publish": "npm publish --access public"
+        "publish": "npm run build & npm publish --access public"
     },
     "keywords": [
         "opeepsfun",
