@@ -81,7 +81,7 @@ const drawTop = (option: keyof typeof tops, color?: ColorProps) => {
     return svg.draw(color?.topColor, color?.outlineColor);
 };
 
-const drawMouth = (option: keyof typeof mouths, color?: ColorProps) => {
+const drawMouth = (option: keyof typeof mouths) => {
     const svg = mouths[option];
 
     if (option === "Nervous") {
@@ -115,7 +115,7 @@ const drawGlasses = (option: keyof typeof eyeglasses | undefined, color?: ColorP
 
 const Avatar = ({ circle, ear = "Detached", mouth = "Laughing", nose = "Round", glasses, eyebrow = "Up", eye = "Smiling", shirt = "Collared", top = "Fonze", size, color = { outlineColor: "#171921", skinColor: "#AC6651" } }: AvatarProps) => {
     const earSvg = drawEar(ear, color);
-    const mouthSvg = drawMouth(mouth, color);
+    const mouthSvg = drawMouth(mouth);
     const topSvg = drawTop(top, color);
     const selectedGlasses = drawGlasses(glasses, color);
     const selectedNose = noses[nose];

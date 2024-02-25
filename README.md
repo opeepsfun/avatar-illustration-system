@@ -85,6 +85,24 @@ The `Avatar` function accepts an object with the following properties:
 -   **shirt:** Optional. Specifies the type of shirt.
 -   **top:** Optional. Specifies the type of top.
 
+
+Here's a Markdown table for the `Avatar` component props:
+
+| Prop | Type | Description |
+| --- | --- | --- |
+| `size` | `number` | The size of the avatar. |
+| `circle` | `{ backgroundColor?: string; }` | Optional. The background color of the circle around the avatar. |
+| `ear` | `"Attached", "Detached"` | Optional. The type of ear. Default is "Detached". |
+| `mouth` | `"Laughing", "Frown", "Nervous", "Pucker", "Sad", "Smile", "Smirk", "Surprised"` | Optional. The type of mouth. Default is "Laughing". |
+| `nose` | `"Round", "Pointed", "Curved"` | Optional. The type of nose. Default is "Round". |
+| `glasses` | `"Round", "Square"` | Optional. The type of glasses. |
+| `eyebrow` | `"Up", "Down", "EyelashesDown", "EyelashesUp"` | Optional. The type of eyebrow. Default is "Up". |
+| `eye` | `"Smiling", "Ellipse", "EllipseShadow", "Round"` | Optional. The type of eye. Default is "Smiling". |
+| `shirt` | `"Collared", "Crew", "Tee"` | Optional. The type of shirt. Default is "Collared". |
+| `top` | `"MisterT", "Fonze", "Full", "Bald", "Doug", "Phantom", "Turban", "Pixie"` | Optional. The type of top. Default is "Fonze". |
+| `color` | `{ outlineColor?: string; skinColor?: string; topColor?: string; shirtColor?: string; collarColor?: string; glassFrameColor?: string; }` | `outlineColor`: Optional. The color of the avatar's outline. Default is "#171921".<br>`skinColor`: Optional. The color of the avatar's skin. Default is "#AC6651".<br>`topColor`: Optional. The color of the avatar's top.<br>`shirtColor`: Optional. The color of the avatar's shirt.<br>`collarColor`: Optional. The color of the avatar's collar.<br>`glassFrameColor`: Optional. The color of the avatar's glasses frame. |
+
+
 ## Build
 
 To build the project, run:
@@ -92,10 +110,6 @@ To build the project, run:
 ```bash
 npm run build
 ```
-
-## Plans
-
-Coloring of the pieces is on the roadmap to offer even more customization and vibrancy to the avatars.
 
 ## Contributing
 

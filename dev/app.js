@@ -1,7 +1,7 @@
 import { Avatar } from "../build/index.js";
 
 const avatar = Avatar({
-    circle: { backgroundColor: "black" },
+    circle: { backgroundColor: "brown" },
     size: 600,
     glasses: "Square",
     ear: "Detached",
@@ -13,7 +13,7 @@ const avatar = Avatar({
         topColor: "yellow",
         shirtColor: "yellow",
         collarColor: "pink",
-        outlineColor: "white",
+        outlineColor: "black",
         glassFrameColor: "yellow"
     }
 });
